@@ -42,7 +42,7 @@ install:
 script:
 
   - cd rst2pdf/tests
-  - ./autotest.py -e
+  - ./autotest.py -e >& /dev/null
   - ./parselogs.py > log.txt
   - cat log.txt
   - cmp log__py27_rl25.txt  log.txt
