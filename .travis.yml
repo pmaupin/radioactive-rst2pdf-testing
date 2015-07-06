@@ -4,6 +4,9 @@
 
 language: python
 
+addons:
+  artifacts: true
+
 matrix:
   include:
 
