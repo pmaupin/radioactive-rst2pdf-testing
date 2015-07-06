@@ -395,6 +395,7 @@ def main(args=None):
     do_text = options.everything or not options.sphinx
     if options.coverage or options.add_coverage:
         assert not options.fastfork, "Cannot fastfork and run coverage simultaneously"
+        assert not do_sphinx, "Cannot run sphinx and coverage simultaneously"
         PathInfo.add_coverage(options.add_coverage)
     elif options.fastfork:
         fastfork = PathInfo.load_subprocess()
