@@ -302,6 +302,8 @@ def run_single(inpfname, incremental=False, fastfork=None, updatemd5=None):
         if not basename:
             sphinxdir = os.path.dirname(sphinxdir)
             basename = os.path.basename(sphinxdir)
+        if os.path.exists(sphinxdir + '.ignore'):
+            return 'ignored', 0
     else:
         iprefix = os.path.splitext(inpfname)[0]
         basename = os.path.basename(iprefix)
