@@ -18,6 +18,44 @@ matrix:
     - python: 2.7
       env: PDFRW=0.1 RLAB=2.5
 
+    - python: 2.7
+      env: PDFRW=0.2 RLAB=2.5
+
+    - python: 2.7
+      env: PDFRW=0.1 RLAB=2.6
+
+    - python: 2.7
+      env: PDFRW=0.2 RLAB=2.6
+
+    - python: 2.7
+      env: PDFRW=0.1 RLAB=2.7
+
+    - python: 2.7
+      env: PDFRW=0.2 RLAB=2.7
+
+    - python: 2.7
+      env: PDFRW=0.1 RLAB=3.0
+
+    - python: 2.7
+      env: PDFRW=0.2 RLAB=3.0
+
+    - python: 2.7
+      env: PDFRW=0.1 RLAB=3.1.8
+
+    - python: 2.7
+      env: PDFRW=0.2 RLAB=3.1.8
+
+    - python: 2.7
+      env: PDFRW=0.1 RLAB=3.1.44
+
+    - python: 2.7
+      env: PDFRW=0.2 RLAB=3.1.44
+
+    - python: 2.7
+      env: PDFRW=0.1 RLAB=3.2.0
+
+    - python: 2.7
+      env: PDFRW=0.2 RLAB=3.2.0
 
 before_install:
 
