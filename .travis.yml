@@ -40,12 +40,6 @@ matrix:
       env: PDFRW=0.2 RLAB=3.0
 
     - python: 2.7
-      env: PDFRW=0.1 RLAB=3.1.8
-
-    - python: 2.7
-      env: PDFRW=0.2 RLAB=3.1.8
-
-    - python: 2.7
       env: PDFRW=0.1 RLAB=3.1.44
 
     - python: 2.7
@@ -85,7 +79,10 @@ script:
   - cd rst2pdf/tests
   - ./autotest.py -e -f >& /dev/null
   - ./parselogs.py > log.txt
-  - zip artifacts -r -q input output
-  - rm -Rf input output
-  - rm `find ../.. -name '*.pyc'`
   - cmp log__py27_rl25.txt  log.txt
+
+after_script:
+
+  - zip artifacts -r -q output log.txt
+  - rm -Rf input output log.txt
+  - rm `find ../.. -name '*.pyc'`
